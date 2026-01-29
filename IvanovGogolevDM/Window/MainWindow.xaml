@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:IvanovGogolevDM.Window"
         mc:Ignorable="d"
-        Title="MainWindow" Height="720" Width="1320">
+        Title="MainWindow" Height="600" Width="800">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"/>
@@ -28,8 +28,22 @@
             <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
         <Button Content="Найти" Grid.Column="1" Grid.Row="1"/>
-        <ListView Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3"/>
-        
+        <ListView Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" Width="700" Height="350">
+        <ListView.View>
+            <GridView>
+                <GridViewColumn Header="Номер перименования" DisplayMemberBinding ="{Binding AssetTransfers.TransferID}"/>
 
+                <GridViewColumn Header="Объект" DisplayMemberBinding ="{Binding Assets.Name}"/>
+
+                <GridViewColumn Header="Ответственный" Width="120" DisplayMemberBinding ="{Binding Employees.FirstName  }"/>
+
+                <GridViewColumn Header="Статус" Width="120" DisplayMemberBinding ="{Binding Assets.Status }"/>
+
+                <GridViewColumn Header="Куда" Width="120" DisplayMemberBinding ="{Binding AssetTransfers.TransferID  }"/>
+
+                <GridViewColumn Header="Дата" Width="120" DisplayMemberBinding ="{Binding AssetTransfers.Date }"/>
+            </GridView>
+        </ListView.View>
+        </ListView>
     </Grid>
 </Window>
