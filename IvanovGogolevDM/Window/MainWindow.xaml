@@ -39,7 +39,7 @@
 
                 <GridViewColumn Header="Статус" Width="120" DisplayMemberBinding ="{Binding Assets.Status }"/>
 
-                <GridViewColumn Header="Куда" Width="120" DisplayMemberBinding ="{Binding AssetTransfers.TransferID  }"/>
+                <GridViewColumn Header="Место назначения" Width="120" DisplayMemberBinding ="{Binding AssetTransfers.TransferID  }"/>
 
                 <GridViewColumn Header="Дата" Width="120" DisplayMemberBinding ="{Binding AssetTransfers.Date }"/>
             </GridView>
